@@ -11,7 +11,7 @@ foreach ( $_POST AS $k => $v ) {
 $res = $wp_filesystem->put_contents( $plugin_file, $content );
 
 $orig_plugin_file = trailingslashit( $new_plugin_folder ) . 'otto-minimal-plugin-template.php';
-$new_plugin_file = trailingslashit( $new_plugin_folder ) . $slug . '.php' ;
+$new_plugin_file = trailingslashit( $new_plugin_folder ) . $_POST['pluginception_slug'] . '.php' ;
 $res = $wp_filesystem->move( $orig_plugin_file, $new_plugin_file );
 
 if( !$res ) {
