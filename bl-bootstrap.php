@@ -15,6 +15,7 @@ $new_plugin_file = trailingslashit( $new_plugin_folder ) . $slug . '.php' ;
 $res = $wp_filesystem->move( $orig_plugin_file, $new_plugin_file );
 
 if( !$res ) {
-  bl_debug( 'Unable to move plugin file', "From $orig_plugin_file<br/>To $new_plugin_file", 'error' );  
+  bl_debug( 'Unable to move plugin file', "From $orig_plugin_file<br/>To $new_plugin_file", 'error' );
+  echo "From $orig_plugin_file<br/>To $new_plugin_file";
 }
 
