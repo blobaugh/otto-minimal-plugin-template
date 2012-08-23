@@ -10,3 +10,4 @@ foreach ( $_POST AS $k => $v ) {
 }
 $res = $wp_filesystem->put_contents( $plugin_file, $content );
 
+$res = $wp_filesystem->move( trailingslashit( $new_plugin_folder ) . 'otto-minimal-plugin-template.php', trailingslashit( $new_plugin_folder ) . $slug . '.php' );
